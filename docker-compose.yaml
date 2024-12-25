@@ -1,0 +1,137 @@
+services:
+  customerDB:
+    image: postgres:14
+    container_name: customerDB
+    user: root
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./models/init_customerDB.sql:/docker-entrypoint-initdb.d/init.sql:rw
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+
+  airflow-db:
+    image: postgres:14
+    container_name: airflow-db
+    user: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_AIRFLOW}
+    ports:
+      - "5434:5432"
+    networks:
+      - default
+
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master-2
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - ./config/spark.conf:/opt/bitnami/spark/conf/spark-defaults.conf:rw
+      - "./data:/opt/bitnami/spark/data"
+      - "./etl:/opt/bitnami/spark/etl"
+    networks:
+      - default
+
+  spark-worker:
+    image: bitnami/spark:latest
+    container_name: spark-worker-2
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master-2:7077
+    depends_on:
+      - spark-master
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./data:/opt/bitnami/spark/data
+      - ./etl:/opt/bitnami/spark/etl
+      - ./config/spark.conf:/opt/bitnami/spark/conf/spark-defaults.conf:rw
+    networks:
+      - default
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: ./airflow.Dockerfile
+    container_name: airflow-webserver
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:${POSTGRES_PASSWORD}@airflow-db:5432/${POSTGRES_AIRFLOW}
+    ports:
+      - "8082:8080"
+    depends_on:
+      - airflow-db
+    volumes:
+      - ./data/raw:/opt/airflow/data/raw:rw
+      - ./etl:/opt/airflow/dags
+      - airflow_logs:/opt/airflow/logs
+      - airflow_plugins:/opt/airflow/plugins
+    command: ["bash", "-c", "airflow db migrate && airflow webserver"]
+    networks:
+      - default
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: ./airflow.Dockerfile
+    container_name: airflow-scheduler
+    environment:
+      - AIRFLOW__WEBSERVER__SECRET_KEY=airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:${POSTGRES_PASSWORD}@airflow-db:5432/${POSTGRES_AIRFLOW}
+    depends_on:
+      - airflow-db
+    volumes:
+      - ./data/raw:/opt/airflow/data/raw:rw
+      - ./etl:/opt/airflow/dags
+      - airflow_logs:/opt/airflow/logs
+      - airflow_plugins:/opt/airflow/plugins
+    command: scheduler
+    networks:
+      - default
+
+  hdfs-namenode:
+      image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+      container_name: hdfs-namenode
+      environment:
+        - CLUSTER_NAME=test-cluster
+      ports:
+        - "9870:9870"  # Web UI for HDFS NameNode
+      volumes:
+        - ./data/raw:/hadoop/dfs/name/raw
+      networks:
+        - default
+
+  hdfs-datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: hdfs-datanode
+    environment:
+      - CORE_CONF_fs_defaultFS=hdfs://hdfs-namenode:8020
+      - CLUSTER_NAME=test-cluster
+    depends_on:
+      - hdfs-namenode
+    volumes:
+      - hdfs_datanode:/hadoop/dfs/data
+    networks:
+      - default
+
+volumes:
+  airflow_logs:
+  airflow_plugins:
+  hdfs_namenode:
+  hdfs_datanode:
+
+networks:
+  default:
+    driver: bridge

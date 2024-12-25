@@ -1,0 +1,101 @@
+customer_id,name,email,dob,region
+2d031d6c,Andrew Weber,alexisjackson@example.com,1999-09-26,Pakistan
+8968c8ff,Christopher Chapman,angela12@example.com,2004-06-03,United Kingdom
+187cfb29,Gabriel Silva,garciasonya@example.com,1979-07-01,Ecuador
+9a577541,Michael Evans,iwolf@example.com,1986-06-16,Indonesia
+3f031c54,Lawrence Molina,michelle91@example.com,1988-02-16,Djibouti
+47960454,Joseph Garcia,jennifermorton@example.org,1975-03-23,Eritrea
+6632261a,Charles Torres,daniellewilson@example.net,1960-03-19,French Southern Territories
+b6eef149,Elijah Rhodes,melaniewhite@example.org,1965-08-11,United States Virgin Islands
+ed2fd9a9,Jeremy Duncan,kfloyd@example.com,1957-09-30,Mayotte
+ecd485c6,James Baker,eglass@example.com,1988-11-22,Afghanistan
+60618b59,Daniel Morton,meghan72@example.org,1944-01-12,Peru
+d88407ef,Melissa Hoover,williamfuller@example.com,1968-09-02,Bolivia
+d09814fe,Christian Adams,mistyyoung@example.net,1947-03-12,Nicaragua
+e5b6426f,Heather Herring,brianolson@example.org,1956-07-09,Bhutan
+0c044797,Jose Acevedo,rpope@example.org,1960-11-05,Samoa
+c6409cc7,Kristin Phillips,bishopariel@example.net,1974-12-27,Cocos (Keeling) Islands
+3b0dc882,Tiffany Cross,alvaradosean@example.com,1948-11-21,Korea
+2ecd5160,Ashley Wilson,qhudson@example.org,1984-11-06,Vanuatu
+e42a6070,Carlos Ball,jamesmitchell@example.com,1977-06-10,Sri Lanka
+255b4bc8,Eric Adams,averyjames@example.net,1972-01-01,Singapore
+2724df32,Leslie Chavez,jerryrodriguez@example.net,1945-11-10,Central African Republic
+2f03f12f,Louis Clark,morrisphyllis@example.net,1967-12-20,Oman
+14770369,Rebecca Vasquez,lindaoneill@example.net,1999-10-03,Tajikistan
+b9a86a64,Kimberly Morris,williammartin@example.org,2002-04-14,Honduras
+fb1df6a5,Roy Hood,weavermelissa@example.org,2003-04-01,North Macedonia
+70fecb03,Sean Salinas,margaret72@example.org,1946-10-14,Myanmar
+6b69d945,Marcus Lopez,shelbyreynolds@example.com,1958-05-15,Israel
+8f6e4b2c,Kimberly Goodman,ystevenson@example.org,2005-11-03,Trinidad and Tobago
+94bb4a68,Erika Aguilar,leedavid@example.com,1988-09-30,Svalbard & Jan Mayen Islands
+9ce938de,John Wilson,berryshelly@example.org,1944-02-26,France
+c1705ba7,Jamie Eaton,rbush@example.com,1983-05-15,Oman
+f14bd7ff,Nicole Jones,afranklin@example.net,2005-01-08,Macao
+5b84f01a,Barbara Fischer,tracy78@example.net,1948-01-28,Sweden
+56d53198,Matthew Watson,cookeerin@example.net,1967-05-11,Niger
+2644d2e0,Julie Reed,butlersteven@example.net,1961-07-10,Uganda
+6c58e8df,Brandon Johnston,frank94@example.org,1956-02-17,Zambia
+3bd40e5f,Virginia Flores,elewis@example.net,1972-02-25,Finland
+33a9766f,Linda Medina,emilybrandt@example.net,1970-10-12,Bangladesh
+617d340b,Jason Lewis,loganamber@example.org,1961-01-25,Georgia
+f6c7054a,Mr. Matthew Williams,kanderson@example.net,1950-03-07,Bulgaria
+8b86f042,Monica Dominguez,scotthughes@example.com,1963-01-12,United States of America
+2611dddd,Erin Scott,riveracourtney@example.org,1983-03-07,Iraq
+2a6dcc21,Heather Reynolds,hwyatt@example.org,1952-11-15,Rwanda
+ba97f735,Brittany Hernandez,ysmith@example.net,1994-06-27,Bosnia and Herzegovina
+18a668c0,Cindy Williamson,christopher90@example.com,1947-12-16,Hungary
+17d92182,Danielle Clark,whitepaul@example.org,1976-11-25,El Salvador
+45d54f69,Ann King,johnsonashley@example.org,1954-05-27,United Kingdom
+8f48c4e5,Kenneth Banks,ianmurphy@example.net,1947-10-27,Saint Helena
+6f850444,Brittany Gutierrez,sdaniel@example.com,1996-05-31,Chile
+2e09b0de,Scott Holmes,sbarnes@example.net,1975-08-26,Namibia
+749b75c5,Pamela Fleming,williamsjoseph@example.com,1979-09-10,Sweden
+e21deb06,Brian Smith,amber91@example.net,1996-06-23,Micronesia
+19b0efa4,Anthony Gray,fvillegas@example.org,1970-01-28,Guatemala
+14c3b17f,Jennifer Flores DDS,carla07@example.org,1991-03-23,United States Virgin Islands
+d6def295,Katelyn Thompson,josephkramer@example.org,1987-09-28,Spain
+0ba2b6b1,John Clark,keithfrank@example.com,1998-04-11,Chad
+b516be41,Taylor Murillo,jacobprice@example.org,1948-11-25,Sweden
+e0c94ea1,Jessica Sloan,vjenkins@example.com,2000-07-01,Nauru
+e770645f,Colleen Miller,nortonkayla@example.com,1974-05-23,Mongolia
+3b6f295a,Christine Guerrero,ptaylor@example.org,1979-08-20,Micronesia
+3d547755,Rebecca Soto,wgarza@example.com,1994-04-23,Christmas Island
+6b32534f,James Lee,stephanie09@example.net,1982-06-02,India
+725a8966,Benjamin Holmes,nathanodonnell@example.org,1991-02-02,Guam
+06a0778a,Karen Murphy,amber44@example.net,1977-04-16,Marshall Islands
+e14a6c5e,David Leach MD,travis95@example.org,1994-09-04,Israel
+0f10074c,Steven Bridges,michael01@example.net,1954-11-25,Turks and Caicos Islands
+85b930c5,Jean Gonzalez,michaellambert@example.net,1958-04-05,Kiribati
+01114f72,Patrick Ross,nrobinson@example.net,1972-01-07,Montenegro
+8de44d36,Roberto Rich,amoody@example.com,1947-05-09,Nigeria
+6e180d2a,Nicholas Walker,rebecca87@example.net,1954-08-13,Niue
+71d430f0,Heidi Ward,ruizadam@example.net,1969-05-31,United States Virgin Islands
+27d2d1b9,Jeanne Johnston,tchristian@example.net,1951-05-31,Dominican Republic
+5810fa1f,Rose Warren,conleycaleb@example.com,1975-09-12,Nauru
+71d0ad5c,Nicholas Smith,taylorwheeler@example.org,1966-12-22,Senegal
+adfe442a,Sharon Ryan,taylorapril@example.org,1983-05-26,Macao
+fb7fc351,Ryan Moreno,philipevans@example.net,1953-11-06,Greenland
+9f19f01b,Judy Hart,coffeyrobert@example.com,2006-07-10,Jersey
+da501283,Jeffrey Shaw,mitchelljonathan@example.org,1956-06-18,Lithuania
+594a24b2,Michael Drake,westangela@example.net,1960-06-12,Lebanon
+bbdac45c,Nicholas Horton,vbarrett@example.org,1980-05-11,Antarctica (the territory South of 60 deg S)
+90724971,Ashley Le,richardsonkaren@example.com,1976-12-29,Colombia
+52240bd9,Kristen Fuller,ronald26@example.com,1985-05-17,Gambia
+6f2f47b8,Sean Jackson,patriciathomas@example.org,1988-11-05,Belarus
+cf7e4702,Pamela Acevedo,hkennedy@example.org,1958-09-17,Benin
+e3381643,Laura Kramer,lcortez@example.org,1976-09-01,Malawi
+6b07f25a,Paul Woods,jcallahan@example.org,1987-03-25,Liberia
+269730e1,Eric Smith,khanson@example.com,2003-12-05,Kazakhstan
+eb1968ad,Christopher Rowe,laurie91@example.net,1960-09-10,Sierra Leone
+46ea03f3,Kevin Scott,fletcherbryan@example.org,1945-01-21,Kazakhstan
+5e626dd3,Lee Doyle,troy13@example.net,1983-10-19,Iceland
+dd7e4260,Anthony Smith,zacharywood@example.org,1946-07-30,Qatar
+8c638422,Brandon Barnes,yramos@example.net,1997-10-21,Azerbaijan
+2de569f8,Catherine Osborne,robertsjenna@example.org,1964-04-16,North Macedonia
+ac087269,Rebecca Franklin,carolcook@example.org,1995-03-18,Nigeria
+0c8087ea,Raymond Rice,melindaking@example.net,1956-11-07,Canada
+69fee70a,Daniel Rhodes,blakematthew@example.com,1962-10-20,Holy See (Vatican City State)
+67187f10,Mary Hoover,terrihopkins@example.org,2002-05-12,Cocos (Keeling) Islands
+84254423,Kevin Stokes,irussell@example.org,2006-01-09,Italy
+7a60b3d0,Stephanie Sexton,kelli25@example.net,1978-08-22,Portugal
+6d6763d1,Kevin Mills,taylorkeith@example.org,1963-02-22,Mexico

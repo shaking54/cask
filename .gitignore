@@ -1,0 +1,4 @@
+data/raw/current
+**/__pycache__/**
+etl/__pycache__/**
+etl/scripts/__pycache__/
