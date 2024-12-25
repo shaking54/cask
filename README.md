@@ -49,11 +49,12 @@ The pipeline is scheduled to run every hour and the data is processed and stored
 
 I have tested the pipeline in local and the etl have worked fine. However, I have still some bugs in docker environments.
 
-Some Image of Data Base in local:
+Some Images of the pipeline:
 
 ![alt text](images/IntegrateOrders.png "Integrated Orders")
 
 ![alt text](images/airflow.png "Orders")
+
 
 
 
