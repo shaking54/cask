@@ -1,4 +1,4 @@
-FROM apache/airflow:2.7.3
+FROM apache/airflow:2.10.4-python3.12
 
 ENV AIRFLOW_HOME=/opt/airflow
 
@@ -22,7 +22,8 @@ RUN DOWNLOAD_URL="https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_l
 
 COPY airflow.requirements.txt .
 
-RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install --no-cache-dir -r airflow.requirements.txt
-
 USER $AIRFLOW_UID
+
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r airflow.requirements.txt
+

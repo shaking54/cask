@@ -88,6 +88,7 @@ services:
     container_name: airflow-scheduler
     environment:
       - AIRFLOW__WEBSERVER__SECRET_KEY=airflow
+      - AIRFLOW__CORE__ENABLE_XCOM_PICKLING=True
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://postgres:${POSTGRES_PASSWORD}@airflow-db:5432/${POSTGRES_AIRFLOW}
     depends_on:
@@ -109,7 +110,7 @@ services:
       ports:
         - "9870:9870"  # Web UI for HDFS NameNode
       volumes:
-        - ./data/raw:/hadoop/dfs/name/raw
+        - hdfs_namenode:/hadoop/dfs/name
       networks:
         - default
 
